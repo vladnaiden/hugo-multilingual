@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<body>
+<div class="wrapper">
+
+
+
+    {{ with .Content }}
+        {{ .}}
+     {{else}}
+        {{ errorf "Not content to include %q" .Path }}
+     {{end}}
+
+
+</div>
+
+
+</body>
+</html>

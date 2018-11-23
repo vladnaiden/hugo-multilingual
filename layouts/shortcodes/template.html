@@ -1,0 +1,12 @@
+{{ $directory := index (index $.Site.Data $.Site.Params.locale) (.Get "directory") }}
+{{ $filename := index $directory (.Get "filename") }}
+
+
+{{ $resources := (.Page.Resources.Match "**") }}
+
+
+{{ range $index, $value := $resources }}
+{{if in $value.Name $filename.image}}
+<img src="data:{{(index ($resources) $index).MediaType}};base64,{{ readFile (index ($resources) $index).RelPermalink | base64Encode }}">
+{{end}}
+{{ end }}

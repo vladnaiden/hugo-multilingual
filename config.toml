@@ -1,0 +1,20 @@
+languageCode = "en-us"
+defaultContentLanguage = "ca"
+
+
+[imaging]
+resampleFilter = "box"
+quality = 100
+
+[languages]
+[languages.ca]
+    url = "/ca/"
+    contentDir = "content/ca"
+    locale = "ca"
+    weight = 1
+[languages.de]
+    url = "de"
+    contentDir = "content/de"
+    locale = "de"
+    weight = 2
+
